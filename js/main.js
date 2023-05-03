@@ -9,23 +9,26 @@ console.log(email);
 function emailVerification() {
 
     // email dell'utente
-    let userEmail = document.getElementById("email").value;
-
-    console.log(userEmail);
-
-    // creare un ciclo con le email
-    for(let i = 0; i < userEmails.length; i++){
+    let userEmail = document.querySelector("input").value;
+    // console.log(userEmail);
+    
+   
+    // se il nome dell'utente è presente allora gli chiedo l'email
+    if(email.includes(userEmail)) {
         
-        // se il nome dell'utente è presente allora gli chiedo l'email
-        if(userEmails.includes(email)) {
-            
-            console.log("benvenuto!");
-        }
-        // altrimenti nega accesso’
-        else{
-            console.log("non sei ancora registrato,registrati!");
-        }
+    document.getElementById("output").innerHTML = "Benvenuto!"
+        // console.log("benvenuto!");
     }
+    // altrimenti nega accesso’
+    else{
+        document.getElementById("output").innerHTML = "Non sei ancora registrato. Registrati!";
+        // console.log("non sei ancora registrato,registrati!");
+    }
+
+    
+
+        
+   
 
 }
     
