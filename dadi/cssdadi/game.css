@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 60%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.text-center{
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 0;
+}
+
+.col{
+    
+    height: 50px;
+    text-align: center;
+}
+
+button{
+    width: 60px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+
+}
+
+span{
+    display: block;
+    font-size: 20px;
+}
+
+i{
+    font-size: 50px;
+}
+
+
+
+/* user section */
+.versus{
+    color: orange;
+    font-size: 15px;
+}
