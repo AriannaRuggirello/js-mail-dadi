@@ -1,6 +1,9 @@
 // Mail
 // Chiedi all’utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato sull’esito del controllo.
 
+
+
+let messaggio = "Non sei ancora registrato. Registrati!"
 // creare un array con una lista di email
 const email = ['lucarossi@gmail.com', 'nomecognome@gmail.com', 'pincopallo@gmail.com', 'rosabianchi@gmail.com'];
 console.log(email);
@@ -12,17 +15,17 @@ function emailVerification() {
     let userEmail = document.querySelector("input").value;
     // console.log(userEmail);
     
+   for(let i = 0; i < email.length; i++){
+
+    let value = email[i];
+    // se il nome dell'utente è presente allora gli do il benvenuto
+    if(value === userEmail) {       
+        messaggio = "Benvenuto!"
+            // console.log("benvenuto!");
+        }  
+   }
    
-    // se il nome dell'utente è presente allora gli chiedo l'email
-    if(email.includes(userEmail)) {
-        
-    document.getElementById("output").innerHTML = "Benvenuto!"
-        // console.log("benvenuto!");
-    }
-    // altrimenti nega accesso’
-    else{
-        document.getElementById("output").innerHTML = "Non sei ancora registrato. Registrati!";
-        // console.log("non sei ancora registrato,registrati!");
-    }
+   document.getElementById('output').innerHTML = messaggio
+   
 }
 
